@@ -45,7 +45,7 @@ class App extends Component {
 
 //Input function to get data from state
 function mapStateToProps(state) {
-  //state refers to the redux state
+  //state refers to the redux state from the store
   if(!state) return {};
 
   let {people, name} = state;

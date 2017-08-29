@@ -37,7 +37,7 @@ let initialState = {
     }]
 }
 //REDUCER
-export default function (state = initialState, action) {
+export default function (state = initialState, action) { //default values kick in when state is null or undefined
     switch (action.type) {
         case UPDATE_NAME:
             return Object.assign({}, state, { name: action.name })
@@ -54,3 +54,7 @@ export default function (state = initialState, action) {
 
     return state;
 }
+
+// PROVIDER - synchronizes the store with react
+// STORE - the "box" that holds all of the stat change inside of inside of it
+// REDUCER - helper that manages the box
